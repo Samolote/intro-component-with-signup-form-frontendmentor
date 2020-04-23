@@ -1,14 +1,13 @@
 :root {
-	--font-color: hsl(0, 100%, 100%);
-	--bg-color: hsl(257, 40%, 49%);
+	--bg-color: hsl(0, 100%, 74%);
+	--main-font-color: hsl(0, 100%, 100%);
+	--info-color: hsl(248, 32%, 49%);
+	--input-font-color: hsl(249, 10%, 26%);
+	--button-color: hsl(154, 59%, 51%);
+	--button-shadow-color: hsl(155, 57%, 46%);
+	--form-terms-color: hsl(246, 25%, 77%);
 
-	--red: hsl(0, 100%, 74%);
-	--green: hsl(154, 59%, 51%);
-
-	--blue: hsl(248, 32%, 49%);
-
-	--dark-blue: hsl(249, 10%, 26%);
-	--grayish-blue: hsl(246, 25%, 77%);
+	--box-shadow: 0 7px hsla(0, 0%, 0%, 0.2);
 
 	--default-transition: 0.3s ease-in-out;
 }
@@ -21,7 +20,111 @@
 
 html {
 	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
+	color: var(--main-font-color);
+}
+
+.main-container {
+	max-width: 1440px;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 1.5rem 5rem;
+	background-color: var(--bg-color);
+	background-image: url('./assets/images/bg-intro-mobile.png');
+	background-size: cover;
+	background-position: center top;
+}
+
+.intro__text-content {
+	text-align: center;
+}
+
+.intro__heading,
+.intro__text {
+	padding: 0 2rem;
+}
+
+.intro__heading {
+	margin: 0 0 1.5rem;
+	font-size: 1.8em;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.intro__text {
+	margin: 0 0 4rem;
+	line-height: 1.8;
+}
+
+.intro__form-information,
+.form {
+	max-width: 540px;
+	border-radius: 10px;
+	box-shadow: var(--box-shadow);
+}
+
+.intro__form-information {
+	margin: 0 auto 2rem;
+	padding: 1.25rem 5rem;
+	background-color: var(--info-color);
+	text-align: center;
+	line-height: 1.6;
+}
+
+.bolder-text {
+	font-weight: 600;
+}
+
+.form {
+	margin: 0 auto;
+	padding: 1.5rem;
+	background-color: var(--main-font-color);
+}
+
+.form__input,
+.form__button {
+	margin: 0 auto 1rem;
+	border-radius: 5px;
+	padding: 1rem 1.25rem;
+	width: 100%;
+}
+
+.form__input {
+	border: 1px solid var(--form-terms-color);
+	font-weight: 700;
+	color: var(--input-font-color);
+}
+
+.form__button {
+	padding-top: 1.25rem;
+	border: none;
+	background-color: var(--button-color);
+	font-size: 1.1em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--main-font-color);
+	box-shadow: 0 3.5px var(--button-shadow-color);
+}
+
+.invalid-input {
+	border-color: var(--bg-color);
+}
+
+.form__terms {
+	margin: 0;
+	font-size: 0.9em;
+	text-align: center;
+	line-height: 2;
+	color: var(--form-terms-color);
+}
+
+.form__text-highlight {
+	font-weight: 600;
+	color: var(--bg-color);
 }
 
 .footer {
