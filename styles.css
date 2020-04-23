@@ -25,6 +25,7 @@ html {
 }
 
 .main-container {
+	margin: 0 auto;
 	max-width: 1440px;
 }
 
@@ -139,4 +140,39 @@ html {
 
 .attribution__anchor {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 600px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.intro {
+		flex-direction: row;
+		align-items: center;
+		padding: 8rem 10%;
+		background-image: url('./assets/images/bg-intro-desktop.png');
+	}
+
+	.intro__text-content,
+	.intro__form-container {
+		flex-basis: 50%;
+	}
+
+	.intro__text-content {
+		margin-right: 5rem;
+		text-align: left;
+	}
+
+	.intro__heading,
+	.intro__text {
+		padding: 0;
+	}
+
+	.intro__heading {
+		font-size: 2.5em;
+		font-weight: 700;
+	}
 }
