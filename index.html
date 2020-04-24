@@ -27,19 +27,49 @@
         </p>
         <form class="form">
           <div class="form__input-container">
-            <input class="form__input" type="text" name="First Name" placeholder="First Name">
+            <input
+              class="form__input"
+              id="first-name"
+              type="text"
+              name="First Name"
+              placeholder="First Name"
+              required
+            >
             <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
           </div>
           <div class="form__input-container">
-            <input class="form__input" type="text" name="Last Name" placeholder="Last Name">
+            <input
+              class="form__input"
+              id="last-name"
+              type="text"
+              name="Last Name"
+              placeholder="Last Name"
+              required
+            >
             <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
           </div>
           <div class="form__input-container">
-            <input class="form__input" type="email" name="Email Address" placeholder="Email Address">
+            <input
+              class="form__input"
+              id="email-address"
+              type="email"
+              name="Email Address"
+              placeholder="Email Address"
+              pattern="^([A-Za-z\d.-]+)@([a-z\d]+)(\.[a-z]{2,24}){1,8}$"
+              required
+            >
             <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
           </div>
           <div class="form__input-container">
-            <input class="form__input" type="password" name="Password" placeholder="Password">
+            <input
+              class="form__input"
+              id="password"
+              type="password"
+              name="Password"
+              placeholder="Password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])\S{8,}$"
+              required
+            >
             <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
           </div>
           <button class="form__button" type="submit">Claim your free trial</button>
