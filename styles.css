@@ -1,5 +1,5 @@
 :root {
-	--bg-color: hsl(0, 100%, 74%);
+	--primary-red: hsl(0, 100%, 74%);
 	--main-font-color: hsl(0, 100%, 100%);
 	--info-color: hsl(248, 32%, 49%);
 	--input-font-color: hsl(249, 10%, 26%);
@@ -7,7 +7,7 @@
 	--button-shadow-color: hsl(155, 57%, 46%);
 	--form-terms-color: hsl(246, 25%, 77%);
 
-	--box-shadow: 0 7px hsla(0, 0%, 0%, 0.2);
+	--box-shadow: 0 7px hsla(0, 0%, 0%, 0.15);
 
 	--default-transition: 0.3s ease-in-out;
 }
@@ -33,7 +33,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	padding: 6rem 1.5rem 5rem;
-	background-color: var(--bg-color);
+	background-color: var(--primary-red);
 	background-image: url('./assets/images/bg-intro-mobile.png');
 	background-size: cover;
 	background-position: center top;
@@ -85,9 +85,17 @@ html {
 	background-color: var(--main-font-color);
 }
 
-.form__input,
+.form__input-container,
 .form__button {
 	margin: 0 auto 1rem;
+}
+
+.form__input-container {
+	position: relative;
+}
+
+.form__input,
+.form__button {
 	border-radius: 5px;
 	padding: 1rem 1.25rem;
 	width: 100%;
@@ -97,6 +105,32 @@ html {
 	border: 1px solid var(--form-terms-color);
 	font-weight: 700;
 	color: var(--input-font-color);
+	transition: border-color var(--default-transition);
+}
+
+.invalid-input {
+	border-color: var(--primary-red);
+}
+
+.invalid-input ~ .form__error-icon {
+	opacity: 1;
+}
+
+.form__error-icon {
+	position: absolute;
+	top: calc(1rem + 1em);
+	right: 1.5rem;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity var(--default-transition);
+}
+
+.form__error-message {
+	margin: 0.5rem 0;
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: right;
+	color: var(--primary-red);
 }
 
 .form__button {
@@ -111,10 +145,6 @@ html {
 	box-shadow: 0 3.5px var(--button-shadow-color);
 }
 
-.invalid-input {
-	border-color: var(--bg-color);
-}
-
 .form__terms {
 	margin: 0;
 	font-size: 0.9em;
@@ -125,7 +155,7 @@ html {
 
 .form__text-highlight {
 	font-weight: 600;
-	color: var(--bg-color);
+	color: var(--primary-red);
 }
 
 .footer {

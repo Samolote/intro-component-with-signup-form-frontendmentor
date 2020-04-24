@@ -26,10 +26,22 @@
           <span class="bolder-text">Try it free 7 days</span> then $20/mo. thereafter
         </p>
         <form class="form">
-          <input class="form__input invalid-input" type="text" placeholder="First Name">
-          <input class="form__input" type="text" placeholder="Last Name">
-          <input class="form__input" type="email" placeholder="Email Address">
-          <input class="form__input" type="password" placeholder="Password">
+          <div class="form__input-container">
+            <input class="form__input" type="text" name="First Name" placeholder="First Name">
+            <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
+          </div>
+          <div class="form__input-container">
+            <input class="form__input" type="text" placeholder="Last Name">
+            <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
+          </div>
+          <div class="form__input-container">
+            <input class="form__input" type="email" placeholder="Email Address">
+            <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
+          </div>
+          <div class="form__input-container">
+            <input class="form__input" type="password" placeholder="Password">
+            <img class="form__error-icon" src="./assets/images/icon-error.svg" alt="">
+          </div>
           <button class="form__button" type="submit">Claim your free trial</button>
           <p class="form__terms">
             By clicking the button, you are agreeing to our
