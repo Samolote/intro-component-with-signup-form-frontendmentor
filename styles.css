@@ -122,6 +122,7 @@ html {
 
 .form__input:focus {
 	border-color: var(--input-font-color);
+	color: var(--input-font-color);
 }
 
 .valid-input {
@@ -130,6 +131,7 @@ html {
 
 .invalid-input {
 	border-color: var(--primary-red);
+	color: var(--primary-red);
 }
 
 .invalid-input ~ .form__error-icon {
