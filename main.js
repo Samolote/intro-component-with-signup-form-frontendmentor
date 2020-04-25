@@ -35,6 +35,7 @@ const removeError = (input) => {
 	input.removeAttribute('aria-describedby');
 	input.classList.add('valid-input');
 	const id = input.id;
+	if (!id) return;
 	let message = input.form.querySelector(`.form__error-message#error-${id}`);
 	if (!message) return;
 	input.parentNode.removeChild(message);
