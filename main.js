@@ -24,7 +24,7 @@ const displayError = (input, error) => {
 		message = document.createElement('p');
 		message.className = 'form__error-message';
 		message.id = `error-${id}`;
-		input.parentNode.insertBefore(message, input.nextSibling);
+		form.insertBefore(message, input.parentNode.nextSibling);
 	}
 	message.textContent = error;
 	input.setAttribute('aria-describedby', `error-${id}`);
@@ -38,7 +38,7 @@ const removeError = (input) => {
 	if (!id) return;
 	let message = input.form.querySelector(`.form__error-message#error-${id}`);
 	if (!message) return;
-	input.parentNode.removeChild(message);
+	form.removeChild(message);
 };
 
 const validateInput = (input) => {

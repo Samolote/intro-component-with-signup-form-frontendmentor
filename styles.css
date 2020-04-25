@@ -138,7 +138,7 @@ html {
 
 .form__error-icon {
 	position: absolute;
-	top: calc(1rem + 1em);
+	top: 50%;
 	right: 1.5rem;
 	transform: translateY(-50%);
 	opacity: 0;
@@ -146,7 +146,7 @@ html {
 }
 
 .form__error-message {
-	margin: 0.5rem 0;
+	margin: -0.5rem 0 1rem;
 	font-size: 0.8em;
 	font-style: italic;
 	text-align: right;
@@ -205,6 +205,7 @@ html {
 		align-items: center;
 		padding: 8rem 10%;
 		background-image: url('./assets/images/bg-intro-desktop.png');
+		background-size: contain;
 	}
 
 	.intro__text-content,
